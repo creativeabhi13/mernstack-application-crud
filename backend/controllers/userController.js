@@ -11,6 +11,18 @@ const createUser = async (req, res) => {
     res.status(500).json({ message: error.message });
     res.send("500", error.message);
   }
+//   try{
+// const data=req.body;
+// const user = new User(data);
+// const userData = await user.save();
+// res.status(200).json(userData);
+// // res.send("created data successfully");
+// if(!userData){
+//   res.status(400).json({message:"User not created"});
+// }
+//   }catch(error){
+//     res.status(500).json({ message: error.message });
+//   }
 };
 
 // get user by id from the database
@@ -21,6 +33,7 @@ const getUser = async (req, res) => {
     res.status(200).json({ user });
   } catch (error) {
     res.status(500).json({ message: error.message });
+    res.send("500", error.message);
   }
 };
 
