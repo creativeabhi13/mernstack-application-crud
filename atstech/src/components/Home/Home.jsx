@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
-import axios from "axios";
+// import axios from "axios";
 
 const Home = () => {
   // create users data
@@ -194,38 +194,38 @@ if(res.status===200){
                   <tr className="border-b bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
                     <th
                       scope="row"
-                      className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                      className="px-8 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
                     >
                       {i + 1 ? i + 1 : "-"}
                     </th>
                     <th
                       scope="row"
-                      className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                      className="px-8 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
                     >
                       {item?.name ? item?.name : "-"}
                     </th>
-                    <td className="px-6 py-4">
+                    <td className="px-8 py-4">
                       {" "}
                       {item?.email ? item?.email : "-"}{" "}
                     </td>
-                    <td className="px-6 py-4">
+                    <td className="px-8 py-4">
                       {" "}
                       {item?.password ? item?.password : "-"}
                     </td>
-                    <td className="px-6 py-4">
+                    <td className="px-8 py-4">
                       {" "}
                       {item?.role ? item?.role : "-"}
                     </td>
-                    <td className="px-6 py-4">
+                    <td className="px-8 py-4">
                       <div className="flex gap-x-4 justify-center">
                         <NavLink
-                          //  to={`/readuser/${item._id}`}
+                           to={`/${item._id}`}
                           className="font-medium text-green-600 dark:text-blue-500 hover:underline"
                         >
                           Read
                         </NavLink>
                         <NavLink
-                          //   to={`/updateuser/${item._id}`}
+                            to={`/update/${item._id}`}
                           className="font-medium text-yellow-400 dark:text-blue-500 hover:underline"
                         >
                           Edit
